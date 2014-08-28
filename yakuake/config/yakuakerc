@@ -1,0 +1,42 @@
+[Appearance]
+Skin=pixelate
+TerminalHighlightOnManualActivation=true
+
+[Dialogs]
+FirstRun=false
+
+[Favorite Profiles]
+Favorites=
+
+[KFileDialog Settings]
+Height 1080=526
+Width 1920=960
+
+[Shortcuts]
+close-active-terminal=Ctrl+W; Ctrl+Shift+W
+close-session=none
+decrease-window-height=none
+decrease-window-width=none
+grow-terminal-bottom=Ctrl+Shift+Down
+grow-terminal-left=Ctrl+Shift+Left
+grow-terminal-right=Ctrl+Shift+Right
+grow-terminal-top=Ctrl+Shift+Up
+increase-window-height=none
+increase-window-width=none
+move-session-left=Ctrl+Alt+J
+move-session-right=Ctrl+Alt+K
+new-session=Ctrl+T; Ctrl+Shift+T
+new-session-quad=Ctrl+L
+next-session=Ctrl+K
+next-terminal=Ctrl+Shift+K
+previous-session=Ctrl+J
+previous-terminal=Ctrl+Shift+J
+rename-session=F2
+split-left-right=Ctrl+G
+split-top-bottom=Ctrl+H
+view-full-screen=F11
+
+[Window]
+Height=100
+KeepAbove=false
+Width=100
