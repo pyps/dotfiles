@@ -1,0 +1,14 @@
+### Regular repository
+
+deb http://http.kali.org/kali kali main non-free contrib
+deb http://security.kali.org/kali-security kali/updates main contrib non-free
+
+### Source repository
+
+#deb-src http://http.kali.org/kali kali main non-free contrib
+#deb-src http://security.kali.org/kali-security kali/updates main contrib non-free
+
+### Bleeding edge repository
+
+#deb http://repo.kali.org/kali kali-bleeding-edge main
+#deb-src http://repo.kali.org/kali kali-bleeding-edge main
