@@ -21,7 +21,7 @@ do
 	sudo ln -sf $repo /etc/apt/sources.list.d/${repo##*/}
 	
 	# Adding repo key
-	source "${script%/*}/${repo##*/}.key.sh"
+	/bin/bash "${script%/*}/${repo##*/}.key.sh"
 
     fi
 done
