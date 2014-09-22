@@ -1,0 +1,31 @@
+# wheezy
+deb http://ftp.nl.debian.org/debian/ wheezy main contrib non-free
+deb-src http://ftp.nl.debian.org/debian/ wheezy main contrib non-free
+
+# wheezy Security
+deb http://security.debian.org/ wheezy/updates main contrib non-free
+deb-src http://security.debian.org/ wheezy/updates main contrib non-free
+
+# wheezy-updates, previously known as 'volatile'
+deb http://ftp.nl.debian.org/debian/ wheezy-updates main contrib non-free
+deb-src http://ftp.nl.debian.org/debian/ wheezy-updates main contrib non-free
+
+# wheezy-backports
+deb http://ftp.nl.debian.org/debian/ wheezy-backports main contrib non-free
+deb-src http://ftp.nl.debian.org/debian/ wheezy-backports main contrib non-free
+
+# jessie
+deb http://ftp.nl.debian.org/debian/ jessie main contrib non-free
+deb-src http://ftp.nl.debian.org/debian/ jessie main contrib non-free
+
+# jessie Security
+deb http://security.debian.org/ jessie/updates main contrib non-free
+deb-src http://security.debian.org/ jessie/updates main contrib non-free
+
+# sid
+deb http://ftp.nl.debian.org/debian/ sid main contrib non-free
+deb-src http://ftp.nl.debian.org/debian/ sid main contrib non-free
+
+# experimental
+deb http://ftp.nl.debian.org/debian/ experimental main contrib non-free
+deb-src http://ftp.nl.debian.org/debian/ experimental main contrib non-free
