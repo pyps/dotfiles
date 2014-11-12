@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "[+][+] Nothing to add here"
+echo "[+] Adding preferences"
 
 exit 0
