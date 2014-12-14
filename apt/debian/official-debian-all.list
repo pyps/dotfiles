@@ -12,20 +12,20 @@
 
 ## wheezy-backports
 deb http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
-deb-src http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
+#deb-src http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
 
 ## jessie
 deb http://ftp.debian.org/debian/ jessie main contrib non-free
-deb-src http://ftp.debian.org/debian/ jessie main contrib non-free
+#deb-src http://ftp.debian.org/debian/ jessie main contrib non-free
 
 ## jessie Security
 deb http://security.debian.org/ jessie/updates main contrib non-free
-deb-src http://security.debian.org/ jessie/updates main contrib non-free
+#deb-src http://security.debian.org/ jessie/updates main contrib non-free
 
 ## sid
 deb http://ftp.debian.org/debian/ sid main contrib non-free
-deb-src http://ftp.debian.org/debian/ sid main contrib non-free
+#deb-src http://ftp.debian.org/debian/ sid main contrib non-free
 
 ## experimental
 deb http://ftp.debian.org/debian/ experimental main contrib non-free
-deb-src http://ftp.debian.org/debian/ experimental main contrib non-free
+#deb-src http://ftp.debian.org/debian/ experimental main contrib non-free
