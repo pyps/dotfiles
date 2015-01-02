@@ -3,6 +3,10 @@ Pin: release a=stable
 Pin-Priority: 500
 
 Package: *
+Pin: release a=wheezy-backports
+Pin-Priority: 400
+
+Package: *
 Pin: release a=testing
 Pin-Priority: 300
 
