@@ -18,19 +18,19 @@ deb http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
 
 
 ## testing
-deb http://ftp.debian.org/debian/ testing main contrib non-free
+#deb http://ftp.debian.org/debian/ testing main contrib non-free
 #deb-src http://ftp.debian.org/debian/ testing main contrib non-free
 
 ## testing Security
-deb http://security.debian.org/ testing/updates main contrib non-free
+#deb http://security.debian.org/ testing/updates main contrib non-free
 #deb-src http://security.debian.org/ testing/updates main contrib non-free
 
 
 ## unstable
-deb http://ftp.debian.org/debian/ unstable main contrib non-free
+#deb http://ftp.debian.org/debian/ unstable main contrib non-free
 #deb-src http://ftp.debian.org/debian/ unstable main contrib non-free
 
 
 ## experimental
-deb http://ftp.debian.org/debian/ experimental main contrib non-free
+#deb http://ftp.debian.org/debian/ experimental main contrib non-free
 #deb-src http://ftp.debian.org/debian/ experimental main contrib non-free
