@@ -1,68 +1,111 @@
-#SSH config
+## SSH config
+## Managed by git@github.com:pyps/dotfiles
+## Version: openssh-server 6.7+
 
-# What ports, IPs and protocols we listen for
-Port 22
 
-# Use these options to restrict which interfaces/protocols sshd will bind to
+
+###############
+### Network ###
+###############
+
+# Use these options to restrict which interfaces/protocols sshd will bind to.
 #ListenAddress ::
 #ListenAddress 0.0.0.0
 
-# User restriction
-AllowUsers bood
+Port 22
+
+
+########################
+### User restriction ###
+########################
+
+# Allow client to pass locale environment variables.
+AcceptEnv LANG LC_*
+
+# Do not execute ~/.ssh/rc
+PermitUserRC no
+
+
+###########################
+### SSHd general config ###
+###########################
 
 Protocol 2
-# HostKeys for protocol version 2
 HostKey /etc/ssh/ssh_host_rsa_key
-HostKey /etc/ssh/ssh_host_dsa_key
+#HostKey /etc/ssh/ssh_host_dsa_key
 HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
 
-#Privilege Separation is turned on for security
+# Privilege Separation is turned on for security.
 UsePrivilegeSeparation sandbox
-
-# Logging
-SyslogFacility AUTH
-LogLevel INFO
-
-# Authentication:
-LoginGraceTime 60
-PermitRootLogin no
-StrictModes yes
-ChallengeResponseAuthentication no
-PermitEmptyPasswords no
-
-RSAAuthentication yes
-PubkeyAuthentication yes
-AuthorizedKeysFile	%h/.ssh/authorized_keys
-
-# Don't read the user's ~/.rhosts and ~/.shosts files
-IgnoreRhosts yes
-RhostsRSAAuthentication no
-HostbasedAuthentication no
-
-# Idle Log Out Timeout Interval
-ClientAliveInterval 300
-ClientAliveCountMax 0
-
-# Crypto
-
-Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes128-ctr
-MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,hmac-ripemd160
-KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1
-
-# User restriction
-X11Forwarding no
-X11DisplayOffset 10
-PrintMotd no
-PrintLastLog yes
-TCPKeepAlive yes
-
-MaxStartups 5:15:30
-#Banner /etc/issue.net
-DebianBanner no
-
-# Allow client to pass locale environment variables
-AcceptEnv LANG LC_*
 
 Subsystem sftp /usr/lib/openssh/sftp-server
 
 UsePAM yes
+
+
+###############
+### Logging ###
+###############
+
+SyslogFacility AUTH
+LogLevel INFO
+
+
+######################
+### Authentication ###
+######################
+
+# Allow specific user to login.
+#AllowUsers user
+
+# Allow specific member of group to login.
+#AllowGroups sudo
+
+PermitRootLogin no
+PasswordAuthentication yes
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+
+PubkeyAuthentication yes
+AuthorizedKeysFile	%h/.ssh/authorized_keys
+
+# Disconnect after x seconds without successfull login.
+LoginGraceTime 30
+MaxAuthTries 4
+MaxSessions 5
+MaxStartups 5:50:10
+
+
+############################
+### Session Idle timeout ###
+############################
+
+# Send "client alive" request after x seconds without data transfer to the client.
+ClientAliveInterval 300
+# Disconnect and terminate the session after x "client alive" requests send, without response.
+ClientAliveCountMax 0
+
+
+##############################
+### Information Disclosure ###
+##############################
+
+#Banner /etc/banner.ssh
+DebianBanner no
+PrintMotd no
+PrintLastLog yes
+
+
+##############
+### Crypto ###
+##############
+
+KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
+
+Ciphers chacha20-poly1305@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
+
+
+#EOF
