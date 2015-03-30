@@ -82,9 +82,10 @@ MaxStartups 5:50:10
 ############################
 
 # Send "client alive" request after x seconds without data transfer to the client.
-ClientAliveInterval 300
+#ClientAliveInterval 300
+
 # Disconnect and terminate the session after x "client alive" requests send, without response.
-ClientAliveCountMax 0
+#ClientAliveCountMax 0
 
 
 ##############################
