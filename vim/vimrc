@@ -5,28 +5,17 @@
 "   #General
 "   #VimUserInterface
 "   #ColorScheme
-"
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-" Sections:
-"    -> Plugin Manager
-"    -> General
-"    -> VIM user interface
-"    -> Colors and Fonts
-"    -> Files and backups
-"    -> Text, tab and indent related
-"    -> Visual mode related
-"    -> Moving around, tabs and buffers
-"    -> Status/Tab line
-"    -> Editing mappings
-"    -> vimgrep searching and cope displaying
-"    -> Spell checking
-"    -> Misc
-"    -> Plugin Config
-"    -> Helper functions
+"   #FilesBackupUndo
+"   #TextTabIndent
+"   #VisualSearch
+"   #MovingTabsWindowsBuffers
+"   #StatuslineTabline
+"   #AutoCmd
+"   #Misc
+"   #PluginConfig
+"   ##syntastic
+"   ##vim-airline
+"   #Functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -138,12 +127,10 @@ set tm=500
 " Show line numbers
 set number
 
-"Switch between absolut and relativ line number
-noremap <silent><leader>n :set rnu! rnu? <cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" #ColorsScheme
+" #ColorScheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
@@ -155,7 +142,7 @@ set background=dark "dark, light
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
+" #FilesBackupUndo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 "set nobackup
@@ -169,7 +156,7 @@ set undofile
 set undodir=~/.vim/undodir
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
+" => TextTabIndent
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 set expandtab
@@ -191,30 +178,28 @@ set wrap "Wrap lines
 
 
 """"""""""""""""""""""""""""""
-" => Visual mode related
+" #VisualSearch
 """"""""""""""""""""""""""""""
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
+" Disable highlight when <leader><cr> is pressed
+map <leader>kk :noh<cr>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
+" #MovingTabsWindowsBuffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
 
 
-" Disable highlight when <leader><cr> is pressed
-map <leader>kk :noh<cr>
-
-
-
 
 """"""""""""""""""""""""""""""
-" => Status/Tab line
+" #StatuslineTabline
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
@@ -222,7 +207,7 @@ set laststatus=2
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => AutoCMD
+" #AutoCmd
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 ""reload vimrc on save
@@ -241,16 +226,11 @@ autocmd BufReadPost *
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
+" #Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Misc
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
@@ -258,11 +238,19 @@ map <leader>pp :setlocal paste!<cr>
 ""save file even if opened RO
 cnoremap sudow w !sudo tee % >/dev/null
 
+"Switch between absolut and relativ line number
+noremap <silent><leader>n :set rnu! rnu? <cr>
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugin Config
+" #PluginConfig
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""vim-airline
+" ##syntastic
+let g:syntastic_error_symbol = '✘'
+let g:syntastic_warning_symbol = "▲"
+
+" ##vim-airline
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_theme='durant'
 let g:airline_left_sep=''
@@ -271,13 +259,8 @@ let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 
 
-""syntastic
-let g:syntastic_error_symbol = '✘'
-let g:syntastic_warning_symbol = "▲"
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Helper functions
+" #Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Delete trailing white space on save, useful for Python.
