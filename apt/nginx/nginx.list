@@ -4,5 +4,5 @@
 
 ## nginx mainline
 deb http://nginx.org/packages/mainline/debian/ wheezy nginx
-deb-src http://nginx.org/packages/mainline/debian/ wheezy nginx
+#deb-src http://nginx.org/packages/mainline/debian/ wheezy nginx
 
