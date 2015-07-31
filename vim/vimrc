@@ -134,15 +134,21 @@ set number
 " Enable syntax highlighting
 syntax enable
 
-colorscheme desert "desert, molokai, peaksea
+try
+    colorscheme desert
+    "colorscheme molokai
+    "colorscheme peaksea
+catch
+endtry
 
-set background=dark "dark, light
+set background=dark
+"set background=light
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " #FilesBackupUndo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+" Turn backup off
 "set nobackup
 "set nowb
 "set noswapfile
