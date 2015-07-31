@@ -1,4 +1,4 @@
-[MIT License](http://img.shields.io/badge/license-MIT-brightgreen.svg)
+![License](https://img.shields.io/github/license/pyps/dotfiles.svg)
 
 dotfiles
 ========
