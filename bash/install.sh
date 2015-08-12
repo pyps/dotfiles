@@ -18,12 +18,23 @@ fi
 #Symlink
 IFS=$'\n'
 for configfile in `find $scriptpath -name "*.bash" -type f | sort `; do
-    echo $configfile
+    # check if any argument is given. If no: ask before symlinking
+    if [ -z "$1" ]; then
+        read -r -p "Do you want to symlink \"${configfile##*/}\" ? [y/N] " response
+        response=${response,,} #ToLower
+
+        if [[ ! $response =~ ^(yes|y)$ ]]; then
+            continue
+        fi
+    fi
+
+    echo "[+] "$configfile" symlinked"
     ln -sf $configfile ~/.bashrc.d/${configfile##*/}
 done
 echo "[*] Created symlinks"
 
-## Config load snippet (formated)
+
+## Config load snippet (formatted)
 #if [ -d $HOME/.bashrc.d ]; then
 #    for configfile in $HOME/.bashrc.d/* ; do
 #        test -f "$configfile" || continue
@@ -46,7 +57,6 @@ else
     echo "" >> ~/.bashrc
     echo "[*] Bash config_load snippet inserted in ~/.bashrc"
 fi
-
 
 
 exit 0
