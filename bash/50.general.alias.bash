@@ -25,4 +25,3 @@ alias grep='grep --color'
 alias grepc='grep -n -C 2'
 #alias agc='ag -C 2'
 alias lookfor="grep -i -R -n --color"
-
