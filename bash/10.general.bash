@@ -1,4 +1,12 @@
 
+## Set system wide gitconfig
+if [[ ! -f /etc/gitconfig ]]; then
+    sudo git config --system user.name NotSet
+    sudo git config --system user.email NotSet
+    sudo git config --system push.default simple
+    echo "[*] Added system default gitconfig "
+fi
+
 
 ### Functions
 ## Extract file, example. "ex package.tar.bz2"
