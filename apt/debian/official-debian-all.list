@@ -13,7 +13,7 @@
 
 
 ## wheezy-backports
-deb http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
+#deb http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
 #deb-src http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
 
 
