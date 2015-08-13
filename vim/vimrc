@@ -234,7 +234,10 @@ map <leader>pp :setlocal paste!<cr>
 cnoremap sudow w !sudo tee % >/dev/null
 
 "Switch between absolut and relativ line number
-noremap <silent><leader>n :set rnu! rnu? <cr>
+noremap <silent><leader>nn :set rnu! rnu? <cr>
+
+"Toggle display of line numbers
+noremap <silent><leader>n :set nonumber! number? <cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
