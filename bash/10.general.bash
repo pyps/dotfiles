@@ -11,6 +11,10 @@ fi
 ### Functions
 ## Extract file, example. "ex package.tar.bz2"
 ex() {
+    if [ -z "$1" ]; then
+        # display usage if no parameters given
+        echo "Usage: ex <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|tar.bz2|tar.gz>"
+    fi
     if [[ -f $1 ]]; then
         case $1 in
             *.tar.bz2)   tar xjf $1  ;;
