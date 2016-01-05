@@ -1,9 +1,11 @@
 
 alias bashrc='vim ~/.bashrc'
 alias ls='ls -h --color'
-alias df='df -h'
-alias ll='ls -lh --color'
+alias ll='ls -l'
+alias la='ls -la'
+alias lt='ls -lAstr'
 alias l='ll'
+alias df='df -h'
 alias cl='clear'
 alias cd..='cd ..'
 alias cd...='cd ../../'
