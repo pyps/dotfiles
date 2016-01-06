@@ -1,14 +1,16 @@
-
 alias bashrc='vim ~/.bashrc'
+
+alias cd..='cd ..'
+alias cd...='cd ../../'
+
 alias ls='ls -h --color'
+alias l='ll'
 alias ll='ls -l'
 alias la='ls -la'
 alias lt='ls -lAstr'
-alias l='ll'
+
 alias df='df -h'
 alias cl='clear'
-alias cd..='cd ..'
-alias cd...='cd ../../'
 alias rb='echo "[*] Reload bash config"; source ~/.bashrc'
 alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias soon='sleep 2 &&'
