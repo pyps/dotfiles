@@ -1,7 +1,7 @@
 ## sudo actions
 alias update='sudo apt-get update'
 alias install='sudo apt-get install'
-alias upgrade='sudo apt update && sudo apt upgrade'
+alias upgrade='sudo apt upgrade'
 
 ## non-sudo actions
 alias madison='apt-cache madison'
