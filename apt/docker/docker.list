@@ -1,0 +1,8 @@
+##Debian Wheezy
+#deb https://apt.dockerproject.org/repo debian-wheezy main
+
+##Debian Jessie
+#deb https://apt.dockerproject.org/repo debian-jessie main
+
+##Debian Stretch/Sid
+deb https://apt.dockerproject.org/repo debian-stretch main
