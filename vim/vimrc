@@ -35,7 +35,8 @@ Plugin 'gmarik/Vundle.vim'    "Plugin Manager
 " Plugins - General
 Plugin 'tpope/vim-fugitive'    "Git integration
 Plugin 'scrooloose/syntastic'    "Syntax check
-Plugin 'bling/vim-airline'    "Vim status line
+Plugin 'vim-airline/vim-airline'    "Vim status line
+Plugin 'vim-airline/vim-airline-themes'
 
 " Plugins - Python
 
