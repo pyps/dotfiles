@@ -1,0 +1,22 @@
+# Different X files: https://unix.stackexchange.com/questions/281858/difference-between-xinitrc-xsession-and-xsessionrc
+xrdb ~/.Xresources
+
+# Disable DPMS turning off the screen
+xset -dpms
+xset s off
+
+# Disable bell
+xset -b
+
+# Enable zapping (C-A-<Bksp> kills X)
+setxkbmap -option terminate:ctrl_alt_bksp
+
+# Set background color
+xsetroot -solid "#333333"
+
+# Start ssh-agent
+eval $(ssh-agent)
+
+# Start i3 and log to ~/.i3/logfile
+echo "Starting at $(date)" >> /tmp/i3_logfile
+exec /usr/bin/i3 >> /tmp/i3_logfile

@@ -1,0 +1,61 @@
+!Xft*autohint: false
+!Xft*antialias: false
+!Xft*hinting: false
+!Xft*hintstyle: false
+!! Xft*dpi: 96
+!Xft*rgba: rgb
+!! Xft*lcdfilter: lcddefault
+
+!Xft.dpi: 96
+
+XTerm*faceName:xft:DejaVu Sans Mono
+XTerm*faceSize:12
+XTerm*jumpScroll:true 
+XTerm*multiScroll:true
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*termName:  xterm-256color
+
+
+URxvt.font:xft:DejaVu Sans Mono:size=13
+URxvt.letterSpace: -2
+URxvt.scrollBar: false
+URxvt.saveLines: 30000
+!URxvt.visualBell:  true
+URxvt.urgentOnBell:  true
+
+! colorscheme gruvbox
+hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
+
+! Check out: https://github.com/majutsushi/urxvt-font-size
+URxvt.perl-ext-common: font-size,selection-to-clipboard
+!URxvt.keysym.C-Up:     perl:font-size:increase
+!URxvt.keysym.C-Down:   perl:font-size:decrease
+!URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+!URxvt.keysym.C-S-Down: perl:font-size:decglobal
