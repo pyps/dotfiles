@@ -21,6 +21,7 @@ _addpath /usr/sbin
 _addpath /usr/local/bin
 _addpath /usr/local/sbin
 #_addpath /usr/games
+_addpath_if_exists $HOME/.local/bin
 _addpath_if_exists $HOME/android/tools
 _addpath_if_exists $HOME/android/platform-tools
 _addpath_if_exists $HOME/bin
